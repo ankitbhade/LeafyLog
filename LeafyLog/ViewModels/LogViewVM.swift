@@ -10,6 +10,12 @@ import Foundation
 // The main 'Your Logs' Tab
 class LogViewVM: ObservableObject {
     
+    @Published var showingNewLogItemView = false
+    
     init() {
+    }
+    
+    func delete(id: String) {
+        
     }
 }

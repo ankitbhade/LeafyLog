@@ -12,4 +12,8 @@ class LogItemViewVM: ObservableObject {
     init() {
         
     }
+    
+    func toggleIsDone(item: LogItem) {
+        
+    }
 }
