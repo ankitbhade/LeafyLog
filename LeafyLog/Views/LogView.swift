@@ -10,11 +10,12 @@ import SwiftUI
 
 struct LogView: View {
     
-    @StateObject var viewModel = LogViewVM()
+    @StateObject var viewModel: LogViewVM
     @FirestoreQuery var items: [LogItem]
     
     init(userId: String) {
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/logs")
+        self._viewModel = StateObject(wrappedValue: LogViewVM(userId: userId))
     }
     
     var body: some View {
@@ -23,12 +24,10 @@ struct LogView: View {
                 List(items) { item in
                     LogItemView(item: item)
                         .swipeActions {
-                            Button {
+                            Button("Delete") {
                                 // Delete item
                                 viewModel.delete(id: item.id)
-                            } label: {
-                                Text("Delete").foregroundColor(Color.red)
-                            }
+                            }.tint(.red)
                         }
                 }.listStyle(PlainListStyle())
             }.navigationTitle("Your Logs")
