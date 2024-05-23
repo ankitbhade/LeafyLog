@@ -24,12 +24,15 @@ struct ContentView: View {
     var accountView: some View {
         TabView {
             LogView(userId: viewModel.currentUserId).tabItem {
-                Label("Home", systemImage: "house")
+                Label("Logs", systemImage: "list.bullet")
+            }
+            JournalView(userId: viewModel.currentUserId).tabItem {
+                Label("Journal", systemImage: "book")
             }
             ProfileView().tabItem {
                 Label("Profile", systemImage: "person.circle")
             }
-        }
+        }.accentColor(Color.green)
     }
 }
 

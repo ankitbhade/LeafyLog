@@ -27,7 +27,7 @@ struct LogView: View {
                             Button("Delete") {
                                 // Delete item
                                 viewModel.delete(id: item.id)
-                            }.tint(.red)
+                            }.tint(Color.red)
                         }
                 }.listStyle(PlainListStyle())
             }.navigationTitle("Your Logs")
@@ -36,7 +36,7 @@ struct LogView: View {
                         // Action
                         viewModel.showingNewLogItemView = true
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus").foregroundColor(Color.green)
                     }
                 }
                 .sheet(isPresented: $viewModel.showingNewLogItemView) {
