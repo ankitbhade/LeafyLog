@@ -58,6 +58,14 @@
 		FC9ADC0A2BF6493600A93535 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = FC9ADC092BF6493600A93535 /* FirebaseVertexAI-Preview */; };
 		FC9ADC0C2BF75C0400A93535 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC0B2BF75C0400A93535 /* Extensions.swift */; };
 		FC9ADC0E2BFCAE9C00A93535 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9ADC0D2BFCAE9C00A93535 /* Launch Screen.storyboard */; };
+		FC9ADC1D2BFF489E00A93535 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC1C2BFF489E00A93535 /* JournalView.swift */; };
+		FC9ADC1F2BFF4A5A00A93535 /* JournalViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC1E2BFF4A5A00A93535 /* JournalViewVM.swift */; };
+		FC9ADC212BFF4A7A00A93535 /* NewJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC202BFF4A7A00A93535 /* NewJournalEntryView.swift */; };
+		FC9ADC232BFF4A9700A93535 /* NewJournalEntryViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC222BFF4A9700A93535 /* NewJournalEntryViewVM.swift */; };
+		FC9ADC252BFF4ABB00A93535 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC242BFF4ABB00A93535 /* JournalEntry.swift */; };
+		FC9ADC272BFF4AD900A93535 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */; };
+		FC9ADC2B2BFF4E8D00A93535 /* EditJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */; };
+		FC9ADC2D2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +94,14 @@
 		FC9ADB672BF612B400A93535 /* LLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLButton.swift; sourceTree = "<group>"; };
 		FC9ADC0B2BF75C0400A93535 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FC9ADC0D2BFCAE9C00A93535 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FC9ADC1C2BFF489E00A93535 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		FC9ADC1E2BFF4A5A00A93535 /* JournalViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewVM.swift; sourceTree = "<group>"; };
+		FC9ADC202BFF4A7A00A93535 /* NewJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJournalEntryView.swift; sourceTree = "<group>"; };
+		FC9ADC222BFF4A9700A93535 /* NewJournalEntryViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJournalEntryViewVM.swift; sourceTree = "<group>"; };
+		FC9ADC242BFF4ABB00A93535 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
+		FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryView.swift; sourceTree = "<group>"; };
+		FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryViewVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +190,10 @@
 				FC4F91FC2BF4BD0B0096DB45 /* LogItemView.swift */,
 				FC4F92102BF4C25D0096DB45 /* LoginHeaderView.swift */,
 				FC9ADB672BF612B400A93535 /* LLButton.swift */,
+				FC9ADC1C2BFF489E00A93535 /* JournalView.swift */,
+				FC9ADC202BFF4A7A00A93535 /* NewJournalEntryView.swift */,
+				FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */,
+				FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +208,9 @@
 				FC4F920A2BF4BDBC0096DB45 /* LoginViewVM.swift */,
 				FC4F920C2BF4BDCC0096DB45 /* RegisterViewVM.swift */,
 				FC4F920E2BF4BDE50096DB45 /* LogItemViewVM.swift */,
+				FC9ADC1E2BFF4A5A00A93535 /* JournalViewVM.swift */,
+				FC9ADC222BFF4A9700A93535 /* NewJournalEntryViewVM.swift */,
+				FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +220,7 @@
 			children = (
 				FC4F91FE2BF4BD380096DB45 /* User.swift */,
 				FC4F92002BF4BD420096DB45 /* LogItem.swift */,
+				FC9ADC242BFF4ABB00A93535 /* JournalEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,14 +342,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4F92072BF4BD9E0096DB45 /* LogViewVM.swift in Sources */,
+				FC9ADC1F2BFF4A5A00A93535 /* JournalViewVM.swift in Sources */,
 				FC4F92112BF4C25D0096DB45 /* LoginHeaderView.swift in Sources */,
+				FC9ADC232BFF4A9700A93535 /* NewJournalEntryViewVM.swift in Sources */,
 				FC4F91FD2BF4BD0B0096DB45 /* LogItemView.swift in Sources */,
+				FC9ADC272BFF4AD900A93535 /* JournalEntryView.swift in Sources */,
+				FC9ADC2D2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift in Sources */,
 				FC4F920D2BF4BDCC0096DB45 /* RegisterViewVM.swift in Sources */,
+				FC9ADC2B2BFF4E8D00A93535 /* EditJournalEntryView.swift in Sources */,
 				FC4F91F92BF4BCD80096DB45 /* LoginView.swift in Sources */,
+				FC9ADC212BFF4A7A00A93535 /* NewJournalEntryView.swift in Sources */,
 				FC4F91D42BF4B5640096DB45 /* ContentView.swift in Sources */,
 				FC4F920F2BF4BDE50096DB45 /* LogItemViewVM.swift in Sources */,
 				FC4F91F52BF4BC970096DB45 /* LogView.swift in Sources */,
 				FC4F92032BF4BD800096DB45 /* ContentViewVM.swift in Sources */,
+				FC9ADC252BFF4ABB00A93535 /* JournalEntry.swift in Sources */,
 				FC4F92052BF4BD8F0096DB45 /* ProfileViewVM.swift in Sources */,
 				FC4F91FB2BF4BCEE0096DB45 /* RegisterView.swift in Sources */,
 				FC9ADB682BF612B400A93535 /* LLButton.swift in Sources */,
@@ -335,6 +366,7 @@
 				FC9ADC0C2BF75C0400A93535 /* Extensions.swift in Sources */,
 				FC4F91FF2BF4BD380096DB45 /* User.swift in Sources */,
 				FC4F91F72BF4BCC30096DB45 /* NewLogItemView.swift in Sources */,
+				FC9ADC1D2BFF489E00A93535 /* JournalView.swift in Sources */,
 				FC4F91F32BF4BC6B0096DB45 /* ProfileView.swift in Sources */,
 				FC4F91D22BF4B5640096DB45 /* LeafyLogApp.swift in Sources */,
 			);
