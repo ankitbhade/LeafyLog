@@ -29,6 +29,9 @@ struct ContentView: View {
             JournalView(userId: viewModel.currentUserId).tabItem {
                 Label("Journal", systemImage: "book")
             }
+            StatsView().tabItem {
+                Label("Stats", systemImage: "chart.bar")
+            }
             ProfileView().tabItem {
                 Label("Profile", systemImage: "person.circle")
             }
