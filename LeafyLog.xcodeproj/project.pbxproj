@@ -102,6 +102,7 @@
 		FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
 		FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryView.swift; sourceTree = "<group>"; };
 		FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryViewVM.swift; sourceTree = "<group>"; };
+		FC9ADC322BFF89CC00A93535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 		FC4F91D02BF4B5640096DB45 /* LeafyLog */ = {
 			isa = PBXGroup;
 			children = (
+				FC9ADC322BFF89CC00A93535 /* Info.plist */,
 				FC4F91EF2BF4BB620096DB45 /* Other */,
 				FC4F91EE2BF4BB5A0096DB45 /* Models */,
 				FC4F91ED2BF4BB530096DB45 /* ViewModels */,
@@ -504,7 +506,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LeafyLog/Preview Content\"";
 				DEVELOPMENT_TEAM = U6UXL4X6P2;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeafyLog/Other",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeafyLog/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Leafy Log";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,6 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankitbhade.LeafyLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -534,7 +542,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LeafyLog/Preview Content\"";
 				DEVELOPMENT_TEAM = U6UXL4X6P2;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeafyLog/Other",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeafyLog/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Leafy Log";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -546,6 +559,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankitbhade.LeafyLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

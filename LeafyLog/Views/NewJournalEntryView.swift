@@ -21,6 +21,17 @@ struct NewJournalEntryView: View {
                 TextField("Title", text: $viewModel.title).textFieldStyle(DefaultTextFieldStyle())
                 // Content
                 TextEditor(text: $viewModel.content).frame(height: 200)
+                // Random prompt
+                Button(action: {
+                    viewModel.selectRandomPrompt()
+                }) {
+                    Text("Use a Random Prompt")
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 10)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
                 // Button
                 Button("Save") {
                     if viewModel.canSave {

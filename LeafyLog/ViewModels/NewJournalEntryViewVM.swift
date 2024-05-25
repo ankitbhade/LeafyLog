@@ -15,6 +15,14 @@ class NewJournalEntryViewVM: ObservableObject {
     @Published var content = ""
     @Published var showAlert = false
     
+    private let prompts = [
+        "What made you smile today?",
+        "What are you grateful for?",
+        "Describe a recent challenge you faced and how you overcame it.",
+        "What is something new you learned today?",
+        "Reflect on a happy memory from your childhood."
+    ]
+    
     func save() {
         guard canSave else {
             return
@@ -33,6 +41,12 @@ class NewJournalEntryViewVM: ObservableObject {
     
     var canSave: Bool {
         return !title.trimmingCharacters(in: .whitespaces).isEmpty && !content.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
+    func selectRandomPrompt() {
+        if let randomPrompt = prompts.randomElement() {
+            content = randomPrompt
+        }
     }
 }
 
