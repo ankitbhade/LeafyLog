@@ -21,6 +21,9 @@ struct NewJournalEntryView: View {
                 TextField("Title", text: $viewModel.title).textFieldStyle(DefaultTextFieldStyle())
                 // Content
                 TextEditor(text: $viewModel.content).frame(height: 200)
+                // Date
+                DatePicker("Select Date", selection: $viewModel.selectedDate, displayedComponents: .date)
+                                    .datePickerStyle(GraphicalDatePickerStyle())
                 // Random prompt
                 Button(action: {
                     viewModel.selectRandomPrompt()

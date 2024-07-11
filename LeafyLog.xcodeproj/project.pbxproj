@@ -66,6 +66,8 @@
 		FC9ADC272BFF4AD900A93535 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */; };
 		FC9ADC2B2BFF4E8D00A93535 /* EditJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */; };
 		FC9ADC2D2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */; };
+		FC9ADC3A2C01E99200A93535 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC392C01E99200A93535 /* StatsView.swift */; };
+		FC9ADC3C2C01EA3D00A93535 /* StatsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ADC3B2C01EA3D00A93535 /* StatsViewVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryView.swift; sourceTree = "<group>"; };
 		FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryViewVM.swift; sourceTree = "<group>"; };
 		FC9ADC322BFF89CC00A93535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC9ADC392C01E99200A93535 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		FC9ADC3B2C01EA3D00A93535 /* StatsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 				FC9ADC202BFF4A7A00A93535 /* NewJournalEntryView.swift */,
 				FC9ADC262BFF4AD900A93535 /* JournalEntryView.swift */,
 				FC9ADC2A2BFF4E8D00A93535 /* EditJournalEntryView.swift */,
+				FC9ADC392C01E99200A93535 /* StatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				FC9ADC1E2BFF4A5A00A93535 /* JournalViewVM.swift */,
 				FC9ADC222BFF4A9700A93535 /* NewJournalEntryViewVM.swift */,
 				FC9ADC2C2BFF4EAB00A93535 /* EditJournalEntryViewVM.swift */,
+				FC9ADC3B2C01EA3D00A93535 /* StatsViewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				FC4F92072BF4BD9E0096DB45 /* LogViewVM.swift in Sources */,
 				FC9ADC1F2BFF4A5A00A93535 /* JournalViewVM.swift in Sources */,
 				FC4F92112BF4C25D0096DB45 /* LoginHeaderView.swift in Sources */,
+				FC9ADC3A2C01E99200A93535 /* StatsView.swift in Sources */,
 				FC9ADC232BFF4A9700A93535 /* NewJournalEntryViewVM.swift in Sources */,
 				FC4F91FD2BF4BD0B0096DB45 /* LogItemView.swift in Sources */,
 				FC9ADC272BFF4AD900A93535 /* JournalEntryView.swift in Sources */,
@@ -357,6 +364,7 @@
 				FC4F91D42BF4B5640096DB45 /* ContentView.swift in Sources */,
 				FC4F920F2BF4BDE50096DB45 /* LogItemViewVM.swift in Sources */,
 				FC4F91F52BF4BC970096DB45 /* LogView.swift in Sources */,
+				FC9ADC3C2C01EA3D00A93535 /* StatsViewVM.swift in Sources */,
 				FC4F92032BF4BD800096DB45 /* ContentViewVM.swift in Sources */,
 				FC9ADC252BFF4ABB00A93535 /* JournalEntry.swift in Sources */,
 				FC4F92052BF4BD8F0096DB45 /* ProfileViewVM.swift in Sources */,

@@ -14,6 +14,7 @@ class NewJournalEntryViewVM: ObservableObject {
     @Published var title = ""
     @Published var content = ""
     @Published var showAlert = false
+    @Published var selectedDate = Date() // Add selectedDate property
     
     private let prompts = [
         "What made you smile today?",
@@ -33,7 +34,7 @@ class NewJournalEntryViewVM: ObservableObject {
         }
         
         let newId = UUID().uuidString
-        let newJournalEntry = JournalEntry(id: newId, title: title, content: content, createdDate: Date().timeIntervalSince1970, userId: userId)
+        let newJournalEntry = JournalEntry(id: newId, title: title, content: content, createdDate: selectedDate.timeIntervalSince1970, userId: userId)
         
         let db = Firestore.firestore()
         db.collection("users").document(userId).collection("journal").document(newId).setData(newJournalEntry.asDictionary())
