@@ -8,13 +8,20 @@
 import FirebaseFirestoreSwift
 import SwiftUI
 
+// A view that displays a list of journal entries for the user
+// It allows users to view, delete, and edit journal entries
 struct JournalView: View {
     
+    // Set viewModel to JournalViewVM
     @StateObject var viewModel: JournalViewVM
+    
+    // Firestore query to fetch journal entries from the user's collection
     @FirestoreQuery var entries: [JournalEntry]
     
+    // Selected journal entry for editing
     @State private var selectedEntry: JournalEntry? = nil
     
+    // Initialize viewModel with the user's ID and setting up the Firestore query
     init(userId: String) {
         self._entries = FirestoreQuery(collectionPath: "users/\(userId)/journal")
         self._viewModel = StateObject(wrappedValue: JournalViewVM(userId: userId))
@@ -23,6 +30,7 @@ struct JournalView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // List of journal entries
                 List(entries) { entry in
                     JournalEntryView(entry: entry)
                         .swipeActions {
@@ -39,8 +47,8 @@ struct JournalView: View {
                 }.listStyle(PlainListStyle())
             }.navigationTitle("Your Journal")
                 .toolbar {
+                    // Add new entry button
                     Button {
-                        // Action
                         viewModel.showingNewJournalEntryView = true
                     } label: {
                         Image(systemName: "plus")

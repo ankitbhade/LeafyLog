@@ -9,16 +9,25 @@ import FirebaseAuth
 import FirebaseFirestore
 import Foundation
 
+// ViewModel for creating a new log item in LeafyLog
+// Responsible for managing the state and logic for creating new log items
 class NewLogItemViewVM: ObservableObject {
     
+    // Title of new log item
     @Published var title = ""
+    
+    // Due date of new log item
     @Published var dueDate = Date()
+    
+    // Indicates whether an alert should be shown
     @Published var showAlert = false
     
+    // Initialize ViewModel
     init() {
         
     }
     
+    // Saves the new log item to Firestore
     func save() {
         // Make sure we can save to the database
         guard canSave else {
@@ -40,6 +49,7 @@ class NewLogItemViewVM: ObservableObject {
         db.collection("users").document(userId).collection("logs").document(newId).setData(newLogItem.asDictionary())
     }
     
+    // Boolean indicating whether the new log item can be saved
     var canSave: Bool {
         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
             return false

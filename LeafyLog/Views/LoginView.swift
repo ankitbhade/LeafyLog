@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+// View for user login
+// This view allows users to enter their email and password to log in to the app
 struct LoginView: View {
     
+    // Set viewModel to LoginViewVM
     @StateObject var viewModel = LoginViewVM()
     
     var body: some View {
@@ -19,21 +22,21 @@ struct LoginView: View {
                 
                 // Form
                 Form {
-                    
+                    // Error message
                     if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage).foregroundColor(Color.red)
                     }
-                    
+                    // Email and Password input fields
                     TextField("Email Address", text: $viewModel.email).textFieldStyle(DefaultTextFieldStyle()).autocapitalization(.none).autocorrectionDisabled()
                     SecureField("Password", text: $viewModel.password).textFieldStyle(DefaultTextFieldStyle())
-                    
+                    // Login button
                     LLButton(title: "Login", background: Color.green) {
                         viewModel.login()
                     }
                 }
                 .offset(y: -50)
                 
-                
+                // Navigation to registration view
                 // Create Account
                 VStack {
                     Text("Don't have an account?")

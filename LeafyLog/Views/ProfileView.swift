@@ -7,13 +7,17 @@
 
 import SwiftUI
 
+// View displaying the user's profile information
+// This view shows the user's profile details and allows the user to log out
 struct ProfileView: View {
     
+    // Set viewModel to ProfileViewVM
     @StateObject var viewModel = ProfileViewVM()
     
     var body: some View {
         NavigationView {
             VStack {
+                // Display profile information if available, otherwise show a loading message
                 if let user = viewModel.user {
                     profile(user: user)
                 } else {
@@ -25,6 +29,7 @@ struct ProfileView: View {
         }
     }
     
+    // A view displaying the user's profile information
     @ViewBuilder
     func profile(user: User) -> some View {
         // Image

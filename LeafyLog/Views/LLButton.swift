@@ -7,10 +7,17 @@
 
 import SwiftUI
 
+// A customizable button with a rounded rectangle background
+// This button allows you to specify a title, background color, and action
 struct LLButton: View {
     
+    // The text displayed on the button
     let title: String
+    
+    // The background color of the button
     let background: Color
+    
+    // Action for the button
     let action: ()-> Void
     
     var body: some View {

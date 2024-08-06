@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+// The main view of the LeafyLog app
+// This view displays either the login screen or the account dashboard based on the user's authentication state
 struct ContentView: View {
     
+    // Set viewModel to ContentViewVM
     @StateObject var viewModel = ContentViewVM()
     
     var body: some View {
+        // Conditional view based on the user's sign in state
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             accountView
         }
@@ -20,6 +24,7 @@ struct ContentView: View {
         }
     }
     
+    // The main account view displayed when the user is signed in
     @ViewBuilder
     var accountView: some View {
         TabView {

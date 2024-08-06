@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+// View for user registration
+// This view allows users to create a new account by providing their name, email, and password
 struct RegisterView: View {
     
+    // Set viewModel to RegisterViewVM
     @StateObject var viewModel = RegisterViewVM()
     
     var body: some View {
@@ -18,12 +21,13 @@ struct RegisterView: View {
             
             // Form
             Form {
+                // Name
                 TextField("Name", text: $viewModel.name).textFieldStyle(DefaultTextFieldStyle()).autocorrectionDisabled()
-                
+                // Email
                 TextField("Email Address", text: $viewModel.email).textFieldStyle(DefaultTextFieldStyle()).autocapitalization(.none).autocorrectionDisabled()
-                
+                // Password
                 SecureField("Password", text: $viewModel.password).textFieldStyle(DefaultTextFieldStyle())
-                
+                // Create Account
                 LLButton(title: "Create Account", background: Color.green) {
                     // Register
                     viewModel.register()

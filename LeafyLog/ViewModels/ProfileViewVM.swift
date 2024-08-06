@@ -9,10 +9,14 @@ import FirebaseAuth
 import FirebaseFirestore
 import Foundation
 
+// ViewModel for the ProfileView in LeafyLog
+// Responsible for managing user profile data and authentication state
 class ProfileViewVM: ObservableObject {
     
+    // Current user's profile information
     @Published var user: User? = nil
     
+    // Fetches the current user's profile data from Firestore
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
@@ -30,10 +34,12 @@ class ProfileViewVM: ObservableObject {
         }
     }
     
+    // Intialize ViewModel
     init() {
         
     }
     
+    // Logs out current user
     func logOut() {
         do {
             try Auth.auth().signOut()

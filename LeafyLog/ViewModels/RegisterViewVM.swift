@@ -9,15 +9,24 @@ import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 
+// ViewModel for the registration view in LeafyLog
+// Responsible for managing user registration and validation logic
 class RegisterViewVM: ObservableObject {
     
+    // User name
     @Published var name = ""
+    
+    // User email
     @Published var email = ""
+    
+    // User password
     @Published var password = ""
     
+    // Initialize ViewModel
     init() {
     }
     
+    // Registers a new user with Firebase Auth
     func register() {
         guard validate() else {
             return
@@ -32,12 +41,14 @@ class RegisterViewVM: ObservableObject {
         }
     }
     
+    // Inserts a new user record into Firestore with id of new user
     private func insertUserRecord(id: String) {
         let newUser = User(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
         let db = Firestore.firestore()
         db.collection("users").document(id).setData(newUser.asDictionary())
     }
     
+    // Validates the user input for registration
     private func validate() -> Bool {
         // Make sure an name, email and password is entered, otherwise print error message and return/stop
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty, !email.trimmingCharacters(in: .whitespaces).isEmpty, !password.trimmingCharacters(in: .whitespaces).isEmpty else {
